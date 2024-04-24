@@ -1,0 +1,72 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.6.4/schema.json",
+  "formatter": {
+    "ignore": ["node_modules", "dist", ".turbo", ".next", ".expo"],
+    "formatWithErrors": false,
+    "lineWidth": 120
+  },
+  "javascript": {
+    "formatter": {
+      "trailingComma": "all",
+      "arrowParentheses": "asNeeded"
+    },
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true
+    }
+  },
+  "json": {
+    "formatter": {
+      "enabled": true,
+      "indentStyle": "space"
+    },
+    "parser": {
+      "allowComments": true
+    }
+  },
+  "linter": {
+    "ignore": ["node_modules", "dist", ".next", ".turbo", ".expo"],
+    "rules": {
+      "recommended": true,
+      "complexity": {
+        "noUselessConstructor": "off",
+        "noUselessFragments": "error",
+        "useArrowFunction": "error",
+        "noForEach": "off"
+      },
+      "style": {
+        "noDefaultExport": "error",
+        "noNonNullAssertion": "off"
+      },
+      "suspicious": {
+        "noConsoleLog": "warn"
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "level": "warn",
+          "options": {
+            "attributes": ["className"],
+            "functions": ["twMerge"]
+          }
+        }
+      }
+    }
+  },
+  "overrides": [
+    {
+      "include": [
+        "**/*.story.tsx",
+        "**/*.story.js",
+        "apps/web/src/middleware.ts",
+        "**/src/app/**",
+        "**/.storybook/**"
+      ],
+      "linter": {
+        "rules": {
+          "style": {
+            "noDefaultExport": "off"
+          }
+        }
+      }
+    }
+  ]
+}

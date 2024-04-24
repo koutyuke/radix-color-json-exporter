@@ -1,0 +1,16 @@
+{
+  "name": "radix-colors-exporter",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@biomejs/biome": "1.7.0",
+    "@tsconfig/strictest": "^2.0.5",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@radix-ui/colors": "latest"
+  }
+}
